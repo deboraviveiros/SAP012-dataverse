@@ -15,7 +15,7 @@ export default [
       "bestActivities": "esportes, lazer",
       "bestMonth": "Julho, Agosto, Setembro, Outubro",
       "itineraryType": "romântico, aventura",
-      "estimatedValue": "$$$",
+      "estimatedValue": "$$$$$",
     },
   },
   // Objeto 2
@@ -34,7 +34,7 @@ export default [
       "bestActivities": "passeios, descanso",
       "bestMonth": "Junho, Julho, Agosto, Setembro",
       "itineraryType": "aventura, romântico",
-      "estimatedValue": "$$",
+      "estimatedValue": "$$$",
     },
   },
   // Objeto 3
@@ -53,7 +53,7 @@ export default [
       "bestActivities": "esportes, descanso",
       "bestMonth": "Julho, Agosto, Setembro, Outubro, Novembro",
       "itineraryType": "romântico, aventura",
-      "estimatedValue": "$$$",
+      "estimatedValue": "$$$$$",
     },
   },
   // Objeto 4
@@ -110,7 +110,7 @@ export default [
       "bestActivities": "esportes, descanso",
       "bestMonth": "Dezembro a Março",
       "itineraryType": "aventura, relaxante",
-      "estimatedValue": "$$$",
+      "estimatedValue": "$$",
     },
   },
   // Objeto 7
@@ -129,7 +129,7 @@ export default [
       "bestActivities": "descanso, festas",
       "bestMonth": "Dezembro, Janeiro, Fevereiro, Março",
       "itineraryType": "divertido, aventura, cultural",
-      "estimatedValue": "$$$",
+      "estimatedValue": "$$$$",
     },
   },
   // Objeto 8
@@ -148,7 +148,7 @@ export default [
       "bestActivities": "descanso, lazer",
       "bestMonth": "Janeiro, Fevereiro, Março",
       "itineraryType": "relaxante, divertido",
-      "estimatedValue": "$$$",
+      "estimatedValue": "$$$$",
     },
   },
   // Objeto 9
@@ -167,7 +167,7 @@ export default [
       "bestActivities": "passeios, lazer",
       "bestMonth": "Abril, Maio, Junho, Setembro",
       "itineraryType": "aventura, relaxante",
-      "estimatedValue": "$$$",
+      "estimatedValue": "$$$$$",
     },
   },
   // Objeto 10
@@ -205,7 +205,7 @@ export default [
       "bestActivities": "descanso, lazer",
       "bestMonth": "Setembro, Outubro, Novembro, Dezembro",
       "itineraryType": "relaxante, divertido",
-      "estimatedValue": "$$$",
+      "estimatedValue": "$$",
     },
   },
   // Objeto 12
@@ -281,7 +281,7 @@ export default [
       "bestActivities": "passeios, festas, lazer",
       "bestMonth": "Setembro, Outubro, Novembro, Dezembro",
       "itineraryType": "cultural, divertido",
-      "estimatedValue": "$$$",
+      "estimatedValue": "$$",
     },
   },
   // Objeto 16
@@ -300,7 +300,7 @@ export default [
       "bestActivities": "passeios, lazer, esportes",
       "bestMonth": "Abril, Maio, Junho, Julho, Agosto, Setembro",
       "itineraryType": "aventura, relaxante, divertido",
-      "estimatedValue": "$$$",
+      "estimatedValue": "$",
     },
   },
   // Objeto 17
@@ -318,7 +318,7 @@ export default [
       "bestActivities": "descanso, lazer",
       "bestMonth": "Dezembro, Janeiro, Fevereiro, Março",
       "itineraryType": "relaxante, divertido, cultural",
-      "estimatedValue": "$$$",
+      "estimatedValue": "$$$$",
     },
   },
   // Objeto 18
@@ -356,7 +356,7 @@ export default [
       "bestActivities": "descanso, lazer",
       "bestMonth": "Dezembro, Janeiro, Fevereiro, Março",
       "itineraryType": "relaxante, divertido",
-      "estimatedValue": "$$$",
+      "estimatedValue": "$$",
     },
   },
   // Objeto 20
@@ -375,7 +375,7 @@ export default [
       "bestActivities": "descanso, lazer",
       "bestMonth": "Dezembro, Janeiro, Fevereiro, Março",
       "itineraryType": "relaxante, divertido, mochilão",
-      "estimatedValue": "$$$",
+      "estimatedValue": "$",
     },
   },
   // Objeto 21
@@ -412,7 +412,7 @@ export default [
       "bestActivities": "esportes, lazer, passeios",
       "bestMonth": "Maio, Junho, Julho, Agosto, Setembro",
       "itineraryType": "aventura, relaxante, mochilão",
-      "estimatedValue": "$$$",
+      "estimatedValue": "$$$$",
     },
   },
   // Objeto 23
@@ -431,7 +431,7 @@ export default [
       "bestActivities": "festas, passeios, descanso",
       "bestMonth": "Dezembro, Janeiro, Fevereiro, Março",
       "itineraryType": "divertido, cultural",
-      "estimatedValue": "$$$",
+      "estimatedValue": "$$",
     },
   },
   // Objeto 24

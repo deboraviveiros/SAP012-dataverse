@@ -11,22 +11,16 @@ Paleta de cores:
 
 
 /* Estilização para tablets */
-@media (min-width: 768px) and (max-width: 1024px) {
-
-}
+@media (min-width: 768px) and (max-width: 1024px) {}
 
 /* Estilização para computadores */
 
 
 /* Orientação paisagem */
-@media(orientation: landscape) {
-
-}
+@media(orientation: landscape) {}
 
 /* Orientação retrato */
-@media(orientation:portrait) {
-
-}
+@media(orientation:portrait) {}
 
 /* Configurações Gerais */
 
@@ -34,57 +28,61 @@ Paleta de cores:
     margin: 0;
     padding: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-decoration: none; /*não está funcionando no a do h1*/
 }
 
 body {
-    max-width:fit-content;
-    min-width: fit-content;
-    max-height: fit-content;
-    min-height: fit-content;
     font-size: 100%;
     background: linear-gradient(45deg, #0ca5b0, #f8f4e4);
     margin-bottom: 50px;
 }
 
 /* Título */
-/* Problemas:
-1) Não consigo centralizar o título
-2) Não consigo tirar o text-decoration
-3) Não consigo ser feliz :'(
-*/
 
-header { /*não estou conseguindo centralizar*/
-    /* max-width: 90vw;
-    max-height: 15vh; */
-    width: 80%;
-    margin:auto;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+header {
+    text-align: center;
+    /* aqui centralizou o conteúdo, tá tranquilo */
+    padding: 10px 5px;
 }
+
 
 h1 {
     padding: 0.9rem;
     color: #4e3f30;
+    font-size: 3.1rem;
 }
 
-a #titulo{
+#titulo {
+    color: #4e3f30;
     text-decoration: none;
-    text-decoration-color: none;
+    /* remove a decoração do hiperlink */
+    cursor: default;
+    /* opcionalllll: define o cursor como padrão para indicar que não é um link */
+}
+
+header h3 {
+    font-size: 26px;
+    -webkit-background-clip: text;
+    color: white;
+    -webkit-text-fill-color: transparent;
+    background-color: #FFF;
+    background-image: -webkit-gradient(linear, left top, right top, from(#ea8711), to(#d96363));
+    background-image: -webkit-linear-gradient(left, #ea8711, #d96363, #73a6df, #9085fb, #52ca79);
+    background-image: -moz-linear-gradient(left, #ea8711, #d96363, #73a6df, #9085fb, #52ca79);
+    background-image: -ms-linear-gradient(left, #ea8711, #d96363, #73a6df, #9085fb, #52ca79);
+    background-image: -o-linear-gradient(left, #ea8711, #d96363, #73a6df, #9085fb, #52ca79);
 }
 
 /* Filtro, organização e botão "Limpar" */
 
-nav { /* entender porque foi colocado */
+nav {
+    /* entender porque foi colocado */
     display: flex;
-    gap: 1.25rem;
-    font-size: 1rem;
+    padding: 15px;
 }
 
-#search-section { /* pesquisar como desgrudar a "org-section" e a "filter-section" */
-    margin: 1.25rem;
+#search-section {
+    /* pesquisar como desgrudar a "org-section" e a "filter-section" */
+    margin: 20px;
     padding: 10px 15px;
     display: flex;
     flex-direction: row;
@@ -94,35 +92,35 @@ nav { /* entender porque foi colocado */
     text-align: justify;
     font-size: 15px;
     color: #4e3f30;
-    border-radius: 1.5rem;
+    border-radius: 24px;
 }
 
-select{
-    width: 5rem;
+select {
+    width: 80px;
     border-radius: 10px;
-    padding: 0.3rem;
+    padding: 4.8px;
     size-adjust: auto;
-    text-align: center; /* não funciona */
 }
 
-#clear-button {
+#button-clear {
+
     margin-left: 1.25rem;
     border-radius: 1.5rem;
     border-color: #fefeeb;
     background-color: #fff;
     font-size: 15px;
     color: #4e3f30;
-    padding: 0.06rem 0.8rem;
+    padding: 0.96px 12.8px;
 }
 
-#clear-button:hover {
+#button-clear:hover {
     color: #fff;
     background-color: #a5b3aa;
 }
 
 /* Cards */
 
-#flex-container{
+#flex-container {
     margin-top: 70px;
 }
 
@@ -134,22 +132,28 @@ ul {
     list-style: none;
     align-content: center;
     justify-content: space-around;
-    row-gap: 30px; /* espaço entre as linhas */
+    row-gap: 30px;
+    /* espaço entre as linhas */
+}
+
+.list__card {
+    box-sizing: border-box;
 }
 
 .container__card {
     margin: 0;
-    width: 25.5rem;
+    width: 408px;
     height: 475px;
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
 }
 
-.container__card:hover .content__card{
+.container__card:hover .content__card {
     cursor: pointer;
     transform: rotateY(180deg);
 }
+
 
 .content__card{
     position: relative;
@@ -163,6 +167,7 @@ ul {
     align-items: center;
     box-sizing: border-box;
     transition: transform 1500ms;
+
     transform-style: preserve-3d; /* não está funcionando */
 }
 
@@ -170,20 +175,17 @@ ul {
     border-radius: 0.5rem;
 }
 
-.front, .back{
+.front, .back {
     position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-}
-
-.front, .back{
     background: #fefeeb;
 }
 
-.back{
-    opacity: 0.5;
+.back {
+    opacity: 0.8;
     transform: rotateY(180deg);
 }
 
@@ -191,7 +193,8 @@ ul {
 
 .image__card {
     width: 100%;
-    max-width: 400px; /* responsividade, se ajusta ao contâiner. TESTAR NO CELULAR PRA VER SE FICOU SHOW */
+    max-width: 400px;
+    /* responsividade, se ajusta ao contâiner. TESTAR NO CELULAR PRA VER SE FICOU SHOW */
     height: 300px;
     padding: 0;
     margin: 2px;
@@ -202,7 +205,7 @@ ul {
     align-items: center;
 }
 
-h2{
+h2 {
     padding: 1px;
     color: #4e3f30;
     pointer-events: none;

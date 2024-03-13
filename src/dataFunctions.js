@@ -1,19 +1,19 @@
 /* Filtragem por Estados */
 
-export const filterData = (data, filterBy, value) => {
-  const filterState = data.filter((element) => element.facts[filterBy] === value);
+export const filterData = (dataFilter, filterBy, value) => {
+  const filterState = dataFilter.filter((element) => element.facts[filterBy] === value);
   return filterState;
 };
 
 /* Organização dos Cards (AZ e ZA) */
 
-export const sortData = (data, sortBy, value) => {
+export const sortData = (dataFilter, sortBy, value) => { 
   if (value === "asc") {
-    return data.toSorted((a, b) => {return a[sortBy].localeCompare(b[sortBy])});
+    return dataFilter.sort((a, b) => {return a[sortBy].localeCompare(b[sortBy])});
   } else if (value === "desc") {
-    return data.toSorted((c, d) => {return c[sortBy].localeCompare(d[sortBy])}).reverse();
+    return dataFilter.sort((c, d) => {return c[sortBy].localeCompare(d[sortBy])}).reverse();
   } else {
-    return data;
+    return dataFilter;
   }
 };
 
@@ -22,5 +22,8 @@ export const sortData = (data, sortBy, value) => {
 //   return "computeStats"
 // }
 
-/* spread operator - const copyData = [...data]; 
-ver testes - toSorted */
+/* export const computeStats = (data) => { 
+  const estatistica = data.map(destinos => destinos.facts.brState).filter(value => !isNaN(value));
+  const contador = estatistica.reduce((acc) => acc + 1, 0);
+  console.log(contador);
+  return contador; */

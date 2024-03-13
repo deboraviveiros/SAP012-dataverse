@@ -6,20 +6,22 @@ import data from "./data/dataset.js";
 const root = document.querySelector("#root");
 root.innerHTML = renderItems(data);
 
-document.addEventListener("DOMContentLoaded", function () { /* Pra que serve esse evento? */
-  const comboFiltrar = document.getElementById("filter-state");
-  const clearButton = document.getElementById("clear-button");
-  const comboOrganizar = document.getElementById("order");
+document.addEventListener("DOMContentLoaded", function () {
+  const comboFiltrar = document.querySelector('#filter-state');
+  const clearButton = document.querySelector('#button-clear');
+  const comboOrganizar = document.querySelector('#order');
+  let dataFilter = [...data];
  
   /* Filtro por Estado */
   comboFiltrar.addEventListener("change", (event) => {
     const selectedState = filterData(data, "brState", event.target.value);
+    dataFilter = selectedState;
     root.innerHTML = renderItems(selectedState);
   });
   
   /* Organizar AZ e ZA*/
   comboOrganizar.addEventListener("change", (event) => {
-    const orgData = sortData(data, "name", event.target.value);
+    const orgData = sortData(dataFilter, "name", event.target.value);
     root.innerHTML = renderItems(orgData);
   });
 
@@ -27,7 +29,13 @@ document.addEventListener("DOMContentLoaded", function () { /* Pra que serve ess
   clearButton.addEventListener("click", () => {
     comboOrganizar.selectedIndex = 0;
     comboFiltrar.selectedIndex = 0;
-    root.innerHTML = renderItems(data); // não está voltando à organização inicial, ou seja, não está limpando a organização
+    root.innerHTML = renderItems(data);
   });
 
 });
+
+//document.querySelector(#root).innerHTML = renderItems(data);
+//innerHTML => renderItems retorna uma string
+//appendChild(elementos) => retorna um elemento HTML criado
+
+// filtrar => retornar um array de 5 elementos
