@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.svg" />
+  <title>Rota dos Sonhos</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/b8f3ef2ad6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <h1><a id="titulo" href="index.html">Rota dos Sonhos</a>
+    </h1> <!--header solicitado com link para home-->
+    <h3>Um arco-íris de destinos dentro do Brasil!</h3>
+  </header>
+  <nav>
+    <div id="search-section"> <!--divs para pesquisa em cima com o logo ao lado-->
+      <div id="org-section">
+        <i class="fa-solid fa-arrow-up-short-wide"></i>
+        <label for="order">Organizar</label><!--label for para criar campo Organizar-->
+        <select id="order" name="sort-order" data-testid="select-sort"><!--seleciona o organizar em abas-->
+          <option value="Todos" selected hidden disabled></option>
+          <!--Todos inseridos com base no bando de dados (localização) someFeatures-->
+          <option value="asc">A-Z</option>
+          <option value="desc">Z-A</option>
+        </select>
+      </div>
+      <div id="filter-section"><!--mesma coisa só que com o filtro de estados, etc-->
+        <i class="fa-solid fa-filter"></i>
+        <label for="filter-state">Filtrar por Estado</label>
+        <select id="filter-state" name="search-filter" data-testid="select-filter">
+          <option value="Todos" selected hidden disabled></option>
+          <!--Todos inseridos com base no bando de dados (localização)-->
+          <option value="AL">AL</option>
+          <option value="AM">AM</option>
+          <option value="BA">BA</option>
+          <option value="CE">CE</option>
+          <option value="GO">GO</option>
+          <option value="MA">MA</option>
+          <option value="MG">MG</option>
+          <option value="MS">MS</option>
+          <option value="PA">PA</option>
+          <option value="PE">PE</option>
+          <option value="PR">PR</option>
+          <option value="RJ">RJ</option>
+          <option value="RS">RS</option>
+          <option value="TO">TO</option>
+        </select>
+      </div>
+      <div id="button-section">
+        <button id="button-clear" data-testid="button-clear" value="clear-filters">Limpar</button>
+      </div>
+    </div>
+  </nav>
+  <main id="flex-container">
+    <div id="root">
+      <!--aqui vamos puxar os cards-->
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-credits">
+      <div id="credits">
+        <p>Desenvolvido por Débora "Nirvi" Viveiros e Rafaela Atanásio para o Bootcamp de Desenvolvimento Web da
+          Laboratória entre janeiro e fevereiro de 2024.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>

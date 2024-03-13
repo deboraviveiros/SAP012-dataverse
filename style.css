@@ -1,0 +1,267 @@
+/* estilos 
+
+Paleta de cores:
+.color1 { #0ca5b0 };
+.color2 { #4e3f30 };
+.color3 { #fefeeb };
+.color4 { #f8f4e4 };
+.color5 { #a5b3aa };
+
+/* Estilização para celulares */
+
+
+/* Estilização para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {}
+
+/* Estilização para computadores */
+
+
+/* Orientação paisagem */
+@media(orientation: landscape) {}
+
+/* Orientação retrato */
+@media(orientation:portrait) {}
+
+/* Configurações Gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    font-size: 100%;
+    background: linear-gradient(45deg, #0ca5b0, #f8f4e4);
+    margin-bottom: 50px;
+}
+
+/* Título */
+
+header {
+    text-align: center;
+    /* aqui centralizou o conteúdo, tá tranquilo */
+    padding: 10px 5px;
+}
+
+
+h1 {
+    padding: 0.9rem;
+    color: #4e3f30;
+    font-size: 3.1rem;
+}
+
+#titulo {
+    color: #4e3f30;
+    text-decoration: none;
+    /* remove a decoração do hiperlink */
+    cursor: default;
+    /* opcionalllll: define o cursor como padrão para indicar que não é um link */
+}
+
+header h3 {
+    font-size: 26px;
+    -webkit-background-clip: text;
+    color: white;
+    -webkit-text-fill-color: transparent;
+    background-color: #FFF;
+    background-image: -webkit-gradient(linear, left top, right top, from(#ea8711), to(#d96363));
+    background-image: -webkit-linear-gradient(left, #ea8711, #d96363, #73a6df, #9085fb, #52ca79);
+    background-image: -moz-linear-gradient(left, #ea8711, #d96363, #73a6df, #9085fb, #52ca79);
+    background-image: -ms-linear-gradient(left, #ea8711, #d96363, #73a6df, #9085fb, #52ca79);
+    background-image: -o-linear-gradient(left, #ea8711, #d96363, #73a6df, #9085fb, #52ca79);
+}
+
+/* Filtro, organização e botão "Limpar" */
+
+nav {
+    /* entender porque foi colocado */
+    display: flex;
+    padding: 15px;
+}
+
+#search-section {
+    /* pesquisar como desgrudar a "org-section" e a "filter-section" */
+    margin: 20px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    text-align: justify;
+    font-size: 15px;
+    color: #4e3f30;
+    border-radius: 24px;
+}
+
+select {
+    width: 80px;
+    border-radius: 10px;
+    padding: 4.8px;
+    size-adjust: auto;
+}
+
+#button-clear {
+
+    margin-left: 1.25rem;
+    border-radius: 1.5rem;
+    border-color: #fefeeb;
+    background-color: #fff;
+    font-size: 15px;
+    color: #4e3f30;
+    padding: 0.96px 12.8px;
+}
+
+#button-clear:hover {
+    color: #fff;
+    background-color: #a5b3aa;
+}
+
+/* Cards */
+
+#flex-container {
+    margin-top: 70px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    align-content: center;
+    justify-content: space-around;
+    row-gap: 30px;
+    /* espaço entre as linhas */
+}
+
+.list__card {
+    box-sizing: border-box;
+}
+
+.container__card {
+    margin: 0;
+    width: 408px;
+    height: 475px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.container__card:hover .content__card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+
+.content__card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 1.25rem 1.25rem 2.5rem rgba(0, 0, 0, 0.5);
+    border-top: 0.063rem solid #fff;
+    border-left: 0.063rem solid #fff;
+    background-color: #fefeeb;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: transform 1500ms;
+
+    transform-style: preserve-3d; /* não está funcionando */
+}
+
+.container__card, .content__card, .front, .back {
+    border-radius: 0.5rem;
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background: #fefeeb;
+}
+
+.back {
+    opacity: 0.8;
+    transform: rotateY(180deg);
+}
+
+/* Cards - Frente */
+
+.image__card {
+    width: 100%;
+    max-width: 400px;
+    /* responsividade, se ajusta ao contâiner. TESTAR NO CELULAR PRA VER SE FICOU SHOW */
+    height: 300px;
+    padding: 0;
+    margin: 2px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    padding: 1px;
+    color: #4e3f30;
+    pointer-events: none;
+    text-align: center;
+}
+
+.shortDescription {
+    margin: 9px;
+    text-align: center;
+    font-size: 13px;
+    color:#4e3f30;
+}
+
+.someFeatures, .itineraryType, .estimatedValue {
+    margin: 5px;
+    text-align: left;
+    color:#4e3f30;
+}
+
+/* Cards - Verso */
+
+.description {
+    margin: 30px;
+    padding: 15px;
+    text-align: center;
+    font-size: 15px;
+    color: #4e3f30;
+    font-weight: bolder;
+}
+
+.bestActivities, .bestMonth {
+    margin: 15px;
+    text-align: center;
+    color: #4e3f30;
+}
+
+/* Footer */
+
+footer {
+    background: #a5b3aa;
+    width: 100%;
+    height: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+p{
+    color:#4e3f30;;
+    font-weight: 600;
+}
+
+/*pesquisar como add display none para mostrar card com as informações a partir do click em ver + */
+/* Adicionar ícones para LinkedIn e Github de cada estudante */
